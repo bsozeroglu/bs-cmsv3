@@ -1,7 +1,7 @@
 {
   "name": "bs-cmsv-3",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
@@ -33,7 +33,7 @@
     "uuid": "9b520896-909d-4d9e-b973-b1d4f951a8ee"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": "14.x",
     "npm": "^6.0.0"
   },
   "license": "MIT"
