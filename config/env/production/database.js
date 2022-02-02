@@ -1,12 +1,4 @@
-import { parse } from "pg-connection-string";
-
 export default ({ env }) => {
-  const { host, port, database, user, password } = parse(
-    env(
-      "postgres://iituxwvvqsunzn:d3b8cdf7dad61f8d030e72de5042aedb067c695f14e90029c882167b2bb32411@ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432/dcl9kl11qujhgi"
-    )
-  );
-
   return {
     defaultConnection: "default",
     connections: {
@@ -14,11 +6,12 @@ export default ({ env }) => {
         connector: "bookshelf",
         settings: {
           client: "postgres",
-          host,
-          port,
-          database,
-          username: user,
-          password,
+          host: "ec2-176-34-105-15.eu-west-1.compute.amazonaws.com",
+          port: "5432",
+          database: "dcl9kl11qujhgi",
+          username: "iituxwvvqsunzn",
+          password:
+            "d3b8cdf7dad61f8d030e72de5042aedb067c695f14e90029c882167b2bb32411",
           ssl: { rejectUnauthorized: false },
         },
         options: {
